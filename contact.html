@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Document</title>
+    <style>
+        /* request a quote */
+.request-quote {
+    position: relative;
+    display: grid;
+    grid-template-columns: 49.8% 49.8%;
+    grid-column-gap: 4px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    background: #fff;
+
+}
+.request-quote > div{ padding: 10px; }
+
+.request-quote_head-left {
+    border-top-right-radius: 6px;
+    text-align: right;
+    color: #fff;
+    background: #333;
+}
+
+.request-quote_head-left h2 { padding-right: 30px; }
+
+.request-quote_head-right {
+    color: #fff;
+    background: #ffb118;
+    border-bottom-left-radius:6px;
+}
+
+.request-quote_head-right h2{ padding-left: 30px; }
+
+.request-quote i {
+    position: absolute;
+    top:50%;
+    left:50%;
+    font-size: 24px;
+    transform: translate(-50%,-50%);
+    padding: 14px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    background: #fff;
+}
+
+/* form */
+.request-quote + div{ 
+    background-image: url("../img/contact2.png");
+}
+
+.request-quote_form-block {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+form div { margin-bottom:24px; }
+
+div > input {
+    width: 95%;
+    height: 36px;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+div > select {
+    width: 47%;
+    height: 38px;
+    text-transform: uppercase;
+}
+
+textarea {
+    width: 95%;
+    resize: none;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+.fancy-bttn2 {
+    display: flex;
+    width: 30%;
+    height: 42px;
+    background: #505050;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+
+.fancy-bttn2 > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66%;
+    height: 100%;
+    color:#fff;
+    font-size: 13px;
+    font-family: Verdana, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom-left-radius: 5px;
+}
+
+.fancy-bttn2 > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34%;
+    height: 100%;
+    font-size: 8px;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 44% 100%);
+    background: #ffb118;
+}
+
+/* panel */
+.request-quote-accordion_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #505050;
+    background: #f6f6f6;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+}
+
+.request-quote-accordion_block > h3 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.request-quote-accordion_block > p {
+    margin: 0;
+    text-align: center;
+}
+
+.request-quote-accordion_block > i {
+    padding: 10px 10px 10px 15px;
+    color:#fff;
+    font-size: 8px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 44% 100%);
+    background: #505050;
+}
+
+.request-quote-accordion_block_special {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+}
+
+.request-quote-accordion_block_special_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request-quote-accordion_block_special_inner > h3 {
+    color: #383838;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.request-quote-accordion_block_special_inner > i {
+    padding: 10px 10px 10px 15px;
+    color:#fff;
+    font-size: 8px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 44% 100%);
+    background: #ffb118;
+}
+
+/* fancy-underline */
+.fancy-underline {
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+}
+
+.bar1 {
+    margin: 6px 0;
+    height: 3px;
+    width: 12px;
+    background: #ffb118;
+}
+
+.bar2{
+    margin: 6px 0;
+    height: 3px;
+    width: 12px;
+    background: #fff;
+}
+
+.bar4{
+    margin: 6px 0;
+    height: 3px;
+    width: 12px;
+    background: #000;
+}
+
+.request-quote-accordion_block_special-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.request-quote-accordion_block_special-two a {
+    padding-top: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted black;
+    color: #1e1e1e;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.request-quote-accordion_block_special-two p { text-align: center; }
+
+.request-quote-accordion_block_special_inner-two span { font-size: 8px; }
+
+.request-quote-accordion_block_special_inner-two span:first-child{ color: #ffb118; }
+
+.request-quote-accordion_block_special_inner-two span:last-child{ color: #000; }
+
+/* trust */
+.trust {
+    background: #1e1e1e;
+    padding: 5%;
+}
+
+.trust_inner {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+    text-align: justify;
+}
+
+.trust_inner > div { padding: 20px; }
+
+.partial-img { grid-area:1/1/5/2; }
+
+.partial-img > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.inner {
+    height: 100px;
+    width: 100px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #cccccc;
+}
+
+.partial-img_head > h2 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.partial-img_head-ceo > h4 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.partial-img_head-ceo > p {
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 10px;
+}
+
+.fancy-squares-trust {
+    display: flex;
+    justify-content: space-between;
+    width: 8%;
+    padding-top: 20px;
+}
+
+.bar {
+    margin: 6px 0;
+    height: 8px;
+    width: 8px;
+    background: #ffb118;
+    border-bottom-left-radius: 4px;
+}
+
+.bar3 {
+    margin: 6px 0;
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    border-bottom-left-radius: 4px;
+}
+/* trust section */
+    </style>
+</head>
+<body>
+    <!-- request a quote-->
+    <div class="request-quote">
+        <div class="request-quote_head-left"><h2>request a quote</h2></div>
+        <div class="request-quote_head-right"><h2>general faq's</h2></div>
+        <span>
+            <i class='fas fa-shipping-fast'></i>
+        </span>
+    </div>
+<!-- form  -->
+    <div>
+        <div class="request-quote_form-block"><!-- main-block-->
+            <form action="#" method="">
+                <div><!--inner-form-block-->
+                    <div>
+                        <input type="text" name="name" placeholder="name">
+                    </div>
+                    <div>
+                        <input type="email" name="name" placeholder="email address">
+                    </div>
+    
+                    <div>
+                        <select id="country" name="country">
+                            <option value="australia">destination from....</option>
+                            <option value="canada">canada</option>
+                            <option value="usa">usa</option>
+                          </select>
+                          <!--  -->
+                          <select id="country" name="country">
+                            <option value="australia">destination to....</option>
+                            <option value="canada">canada</option>
+                            <option value="usa">usa</option>
+                          </select>
+                    </div>
+    
+                    <div>
+                        <select id="country" name="country">
+                            <option value="australia">logistic type</option>
+                            <option value="canada">canada</option>
+                            <option value="usa">usa</option>
+                          </select>
+                          <!--  -->
+                          <select id="country" name="country">
+                            <option value="australia">subject</option>
+                            <option value="canada">canada</option>
+                            <option value="usa">usa</option>
+                          </select>
+                    </div>
+    
+                    <div>
+                        <textarea name="message" rows="10" placeholder="message"></textarea>
+                    </div>
+    
+                    <div class="fancy-bttn2">
+                        <a href="#">read more</a>
+                        <span><i class="fa fa-square"></i></span>
+                    </div>
+                </div>
+            </form>
+    
+            <div class="request-quote-accordion"><!--main-->
+                <div class="request-quote-accordion_block"><!-- sub_block -->
+                    <h3>hello world</h3>
+                    <i class="fa fa-plus" aria-hidden="true" ></i>
+                </div>
+                <div class="request-quote-accordion_block_special"><!-- sub_block-special -->
+                    <div class="request-quote-accordion_block_special_inner">
+                        <h3>hello world</h3>
+                        <i class="fa fa-plus" aria-hidden="true" ></i>
+                    </div>
+                    <div class="fancy-underline">
+                        <div class="bar1"></div>
+                        <div class="bar4"></div>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo odit ullam quasi ipsa sequi inventore minus quos nostrum eaque tempore! Incidunt laboriosam veritatis dignissimos deserunt vitae repellat sint maiores officiis.</p>
+                </div>
+                <div class="request-quote-accordion_block">
+                    <h3>hello world</h3>
+                    <i class="fa fa-plus" aria-hidden="true" ></i>
+                </div>
+                <div class="request-quote-accordion_block">
+                    <h3>hello world</h3>
+                    <i class="fa fa-plus" aria-hidden="true" ></i>
+                </div>
+                <!-- <div class="request-quote-accordion_block">
+                </div> -->
+                <div class="request-quote-accordion_block_special-two"><!-- sub_block-special -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repudiandae blanditiis autem! Fuga omnis perspiciat</p>
+                    <div class="request-quote-accordion_block_special_inner-two">
+                        <span class="fa fa-square" ></span><span>&nbsp;</span><span class="fa fa-square"></span>
+                    </div>
+                    <a href="#">get in touch</a>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!-- /request a quote section -->
+
+    <!-- trust -->
+    <div class="trust">
+        <div class="trust_inner">
+            <div class="partial-img"><!--item-1-->
+            <div>
+                <div class="inner"></div>
+            </div>
+        </div>
+        <div class="partial-img_head"><!--item-2-->
+            <h2>they trust us</h2>
+            <div class="fancy-underline">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+            </div>
+        </div>
+        <div class="partial-img_head-ceo"><!--item-3-->
+            <h4>john matt</h4>
+            <p>ceo of trans global ltd</p>
+        </div>
+        <div>
+            <em>" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos esse praesentium accusamus animi unde accusantium iusto commodi vero, natus incidunt aspernatur necessitatibus rerum sed deserunt ipsa quam odio, veritatis illum! Eveniet dicta illo tempora sint optio laborum? Eius, nihil delectus! Quod modi culpa enim recusandae qui, ipsum laborum delectus. Rem. "</em>
+        </div>
+        <div>
+            <div class="fancy-squares-trust">
+                <div class="bar"></div>
+                <div class="bar3"></div>
+                <div class="bar3"></div>
+                <div class="bar3"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- /trust -->
+</body>
+</html>    
